@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fc;
+    color: #333;
+}
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: 60px 1fr 50px;
+    grid-template-areas:
+        "topbar topbar"
+        "sidebar main"
+        "footer footer";
+    height: 100vh;
+}
+
+/* Top Bar */
+.topbar {
+    grid-area: topbar;
+    background-color: #4f46e5;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.topbar-right .button {
+    background: white;
+    color: #4f46e5;
+    padding: 0.5rem 1rem;
+    margin-left: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.topbar-right .logout {
+    background-color: #ef4444;
+    color: white;
+}
+
+/* Sidebar */
+.sidebar {
+    grid-area: sidebar;
+    background-color: #e5e7eb;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar-link {
+    background-color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #111827;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.sidebar-link:hover {
+    background-color: #dbeafe;
+}
+
+/* Main Content */
+.main-content {
+    grid-area: main;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Footer */
+.footer {
+    grid-area: footer;
+    background-color: #4b5563;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
